@@ -1,0 +1,73 @@
+<div class="box1">
+  <div class="box2">
+    <img [src]="this.imagePath" />
+    <div class="preco1"><b class="preco">Doce A: R$ 6,00</b></div>
+    <div class="preco2"><b class="preco">Doce B: R$ 7,00</b></div>
+    <div class="preco3"><b class="preco">Doce C :R$ 8,00</b></div>
+  </div>
+  <div class="box3">
+    <div class="money">
+      <b class="text">R$: </b>
+      <button
+        class="btn btn-primary btn-sm"
+        (click)="selecionaDinheiro(1)"
+        [disabled]="this.troco > 0 || valorLimite"
+      >
+        1
+      </button>
+      <button
+        class="btn btn-primary btn-sm"
+        (click)="selecionaDinheiro(2)"
+        [disabled]="this.troco > 0 || valorLimite"
+      >
+        2
+      </button>
+      <button
+        class="btn btn-primary btn-sm"
+        (click)="selecionaDinheiro(5)"
+        [disabled]="this.troco > 0 || valorLimite"
+      >
+        5
+      </button>
+      <input class="input1" readonly value="R$ {{ this.valor }},00" />
+    </div>
+    <br />
+    <div class="candy">
+      <b class="text escolha">Escolha: </b>
+      <button
+        class="btn btn-warning btn-sm"
+        [disabled]="!doceASuficiente"
+        (click)="selecionarDoce('A')"
+      >
+        doce A
+      </button>
+      <button
+        class="btn btn-warning btn-sm"
+        [disabled]="!doceBSuficiente"
+        (click)="selecionarDoce('B')"
+      >
+        doce B
+      </button>
+      <button
+        class="btn btn-warning btn-sm"
+        [disabled]="!doceCSuficiente"
+        (click)="selecionarDoce('C')"
+      >
+        doce C
+      </button>
+    </div>
+
+    <div class="box4">
+      <img class="A" @fade *ngIf="this.doce === 'A'" [src]="this.APath" />
+      <img class="B" @fade *ngIf="this.doce === 'B'" [src]="this.BPath" />
+      <img class="C" @fade *ngIf="this.doce ==='C'" [src]="this.CPath" />
+      <div *ngIf="this.troco >= 0" class="bloco-preco"   >
+        <b class="text troco" @fadeLong>Troco:</b>
+        <input class="input2" readonly value="R$ {{ this.troco }},00" @fadeLong/>
+        <button class="btn btn-success btn-sm" (click)="receber()" @fadeLong>
+          Receber
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

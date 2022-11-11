@@ -1,0 +1,126 @@
+.box1{
+  background-color: grey;
+  border: 1px solid black;
+  height: 600px;
+  width: 400px;
+}
+
+.box2{
+  background-color: white;
+  border: 1px solid grey;
+  height: 300px;
+  width: 350px;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+.box3{
+  background-color: darkgray;
+  border: 1px solid grey;
+  height: 226px;
+  width: 350px;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+.box4{
+  background-color: black;
+  border: 1px solid darkgray;
+  height: 80px;
+  width: 150px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.btn{
+  margin: 3px;
+  margin-top: -4px;
+}
+
+
+.text{
+  font-size: 20px;
+}
+
+.escolha{
+  margin-left: 20px;
+}
+
+.money{
+  margin-top: 13px;
+  margin-left: 30px;
+}
+
+.candy{
+  margin-left: 10px;
+}
+
+.troco{
+  margin-left: 210px;
+}
+
+.input1{
+  border-radius: 8px !important;
+  width: 73px;
+  height: 33px;
+  margin-left: 100px !important;
+}
+
+.input2{
+  border-radius: 8px !important;
+  width: 73px;
+  height: 33px;
+  margin-left: 165px !important;
+}
+
+.btn-success{
+  margin-top: -60px;
+  margin-left: 245px !important;
+}
+
+img{
+  width: 350px;
+  height: 298px;
+}
+
+.preco1{
+  margin-left: 20px;
+  margin-top: -228px;
+}
+
+.preco2{
+  margin-left: 20px;
+  margin-top: 78px
+}
+
+.preco3{
+  margin-left: 20px;
+  margin-top: 74px
+}
+
+.preco{
+  background-color: yellow;
+}
+
+.A{
+  margin-left: 55px;
+  width: 40px;
+  height: auto;
+}
+
+
+.B{
+  margin-left: 60px;
+  width: 33px;
+  height: auto;
+}
+
+.C{
+  margin-left: 55px;
+  width: 37px;
+  height: auto;
+}
+
+.bloco-preco{
+  margin-top: -70px;
+}

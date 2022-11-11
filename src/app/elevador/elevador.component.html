@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-5">
+    <div class="predio">
+      <div class="topo"></div>
+      <div class="linha"></div>
+      <button class="btn btn-sm painel-botao" (click)="mover(4)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 4">Chamar</button>
+      <div class="andar terceiro">
+        <div class="elevador">
+          <img class="elevadorImagem" *ngIf="andarAtual == 4" [src]="elevadorAbertoPath" />
+          <img class="elevadorImagem" *ngIf="andarAtual != 4" [src]="elevadorFechadoPath" />
+        </div>
+      </div>
+      <button class="btn btn-sm painel-botao" (click)="mover(3)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 3">Chamar</button>
+      <div class="andar segundo">
+        <div class="elevador">
+          <img class="elevadorImagem" *ngIf="andarAtual == 3" [src]="elevadorAbertoPath" />
+          <img class="elevadorImagem" *ngIf="andarAtual != 3" [src]="elevadorFechadoPath" />
+        </div>
+      </div>
+      <button class="btn btn-sm painel-botao" (click)="mover(2)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 2">Chamar</button>
+      <div class="andar primeiro">
+        <div class="elevador">
+          <img class="elevadorImagem" *ngIf="andarAtual == 2" [src]="elevadorAbertoPath" />
+          <img class="elevadorImagem" *ngIf="andarAtual != 2" [src]="elevadorFechadoPath" />
+        </div>
+      </div>
+      <button class="btn btn-sm painel-botao" (click)="mover(1)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 1">Chamar</button>
+      <div class="andar terreo">
+        <div class="compart" [@moveState]="{value: state, params: {movement: movement, timing: timing}}">
+          <div class="row">
+            <button class="btn btn-sm" style="margin-top: 6px; margin-left: 20px" (click)="mover(4)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 4">
+              3
+            </button>
+            <button class="btn btn-sm" style="margin-top: 6px" (click)="mover(3)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 3">
+              2
+            </button>
+          </div>
+          <div class="row">
+            <button class="btn btn-sm" style="margin-left: 20px" (click)="mover(2)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 2">
+              1
+            </button>
+            <button class="btn btn-sm" (click)="mover(1)" [disabled]="lockAll || andarAtual == 0 || andarAtual == 1">
+              T
+            </button>
+          </div>
+        </div>
+        <div class="elevador">
+          <img class="elevadorImagem" *ngIf="andarAtual == 1" [src]="elevadorAbertoPath" />
+          <img class="elevadorImagem" *ngIf="andarAtual != 1" [src]="elevadorFechadoPath" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
